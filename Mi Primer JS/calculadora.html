@@ -1,0 +1,89 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <style>
+            *{
+                margin: 0;
+            }
+            .botones{
+                margin-top: 20px;
+                text-align: center;             
+            }
+            #num1, #num2{
+                margin: 30px;
+            }
+            #op{
+                margin: 20px;       
+            }
+            input{
+                width: 150px;
+                height: 30px;
+            }
+            h1{
+                margin-top:30px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            #igual{
+                margin-bottom: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Calculadora Básica</h1>
+        <div class="botones">
+            <input type="text" id="num1">
+            <input type="text" id="num2"><br>
+            <input type="button" value="+" id="op" onclick="Suma()"><input type="button" value="-" id="op" onclick="Resta()"><input type="button" value="x" id="op" onclick="Multi()"><input type="button" value="/" id="op" onclick="Divi()">     <h1 id="igual">=</h1>
+            <input type="text" id="res">
+        </div>
+
+    </body>
+    <script>
+        function Suma(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var x = parseInt(x);
+            var y = parseInt(y);
+            res = x+y;
+
+            var cajita = document.getElementById("res");
+            cajita.value = res;
+        }
+        function Resta(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var x = parseInt(x);
+            var y = parseInt(y);
+            res = x-y;
+
+            var cajita = document.getElementById("res");
+            cajita.value = res;
+        }
+        function Multi(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var x = parseInt(x);
+            var y = parseInt(y);
+            res = x*y;
+
+            var cajita = document.getElementById("res");
+            cajita.value = res;
+        }
+        function Divi(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var x = parseInt(x);
+            var y = parseInt(y);
+            if (y == 0){
+                window.alert("No se puede dividir entre cero.")
+            } else{
+                res = x/y;
+                var cajita = document.getElementById("res");
+                cajita.value = res;
+            }
+        }
+    </script>
+</html>

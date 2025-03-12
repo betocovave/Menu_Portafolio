@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="input" onkeypress="crearComentarios(event)">
+            <input type="text">
+        </div>
+
+        <div class="contenedor"></div>
+
+        <script>
+        let arreglo = [];
+
+        function crearComentarios(event) {
+            if (event.key === "Enter" && event.target.value !== "") {
+                const nuevoComentario = {
+                    texto: event.target.value,
+                    likes: 0
+                };
+
+                arreglo.push(nuevoComentario);
+                event.target.value = "";
+                actualizarComentarios();
+            }
+        }
+        function actualizarComentarios() {
+            var contenedor = document.querySelector(".contenedor");
+            contenedor.innerHTML = "";
+
+            arreglo.forEach((comentario, index) => {
+                var caja = document.createElement("div");
+                caja.textContent = comentario.texto;
+
+                //boton like
+                let botonLike = document.createElement("button");
+                botonLike.textContent = " Like " + comentario.likes;
+                botonLike.classList.add("likeboton");
+                botonLike.addEventListener("click", function () {
+                    comentario.likes++;
+                    botonLike.textContent = " Like " + comentario.likes; 
+                });
+
+                //boton eliminar
+                let botonDelete = document.createElement("button");
+                botonDelete.textContent = " Eliminar";
+                botonDelete.addEventListener("click", function () {
+                    arreglo.splice(index, 1); 
+                    actualizarComentarios(); 
+                });
+
+                caja.appendChild(botonLike);
+                caja.appendChild(botonDelete);
+                contenedor.appendChild(caja);
+            });
+        }
+        </script>
+    </body>
+</html>

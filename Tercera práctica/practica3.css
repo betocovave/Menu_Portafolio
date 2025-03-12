@@ -1,0 +1,54 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ca2806;
+    font-size: medium;
+}
+
+body{
+    margin: 10px 80px 0 80px;
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+}
+#titulo1{
+    font-size: larger;
+    color: crimson;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 5px;
+}
+.titulos{
+    font-size: 30px;
+    color: darkred;
+    
+}
+.segundo{
+    padding: 0 20px 0 20px;
+    text-align: justify;
+}
+.tercero{
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #ca2806; 
+    color: white;   
+}
+#send{
+    background-color: black;
+    margin-right: 100px;
+}
+.cuarto{
+    text-align: center;
+}
+.cuarto img{
+    width: 20%;
+    height: 20%;
+}
+.quinto p{
+    text-align: justify;
+    color: black;
+    background-color: rosybrown;
+    padding: 22px;
+}

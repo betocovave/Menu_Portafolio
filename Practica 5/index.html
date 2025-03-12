@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="slider-container">
+            <div>
+                <img class="slide-img" src="img/img1.jpg">
+            </div>
+        </div>
+        <div class="BOTONES">
+            <button class="botonanterior">ANTERIOR</button>
+            <button class="botonsig">SIGUIENTE</button>
+        </div>
+    </body>
+    <script>
+        arreglo=["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg"];
+        contador = 0;
+        cajitaImg = document.querySelector(".slide-img");
+        sig = document.querySelector (".botonsig");
+        ant = document.querySelector (".botonanterior");
+        sig.addEventListener("click",
+        function(){
+            contador++;
+            cajitaImg.setAttribute("src", arreglo[contador]);
+            if (contador == arreglo.length - 1){
+                sig.style.display="none";
+            }
+            else{
+                sig.style.display="block";
+            }
+            if (contador > 0) {
+                ant.style.display = "block";
+            }
+        }
+        );
+        ant.addEventListener("click",
+        function(){
+            contador--;
+            cajitaImg.setAttribute("src", arreglo[contador]);
+            if (contador == 0){
+                ant.style.display="none";
+            } else {
+                ant.style.display = "block";
+            }
+            if (contador < arreglo.length - 1) {
+                sig.style.display = "block";
+            }
+        }
+        )
+    </script>
+</html>

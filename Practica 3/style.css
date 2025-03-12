@@ -1,0 +1,86 @@
+
+
+body{
+    font-family: 'Lato', serif;
+    font-weight: 400;
+    font-style: italic;  
+    text-align: center;
+    background-color: rgb(233, 233, 233);
+}
+.lato-regular-italic {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+.header{
+    background-color: #082c74;
+    color: white;
+    padding: 20px 20px;
+    font-size: 18px;
+}
+.header a{
+    margin: 60px;
+    font-size: medium;
+}
+.header a:hover{
+    color: red;
+}
+.titulo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color:#082c74;
+}
+.dividible{
+    background-color: #fff;
+}
+.subtitulo{
+    margin-top: 20px;
+    font-size: 29px;
+    color: #082c74;
+}
+.texto{
+    font-size: 15px;
+}
+.texto2{
+    font-size: 15px;
+}
+#boton {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 1.2s ease;
+    margin: 30px;
+    border-radius: 7px;
+    width: 400px;
+    height: 75px;
+}
+#boton:hover {
+    transform: scale(1.1);
+    background-color: #2d4373;
+}
+#boton2 {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 1.2s ease;
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 250px;
+    height: 50px;
+}
+#boton2:hover {
+    transform: scale(1.1);
+    background-color: #2d4373;
+}
+.imagen img{
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+}
+
